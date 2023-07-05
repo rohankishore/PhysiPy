@@ -17,7 +17,13 @@ One of the key features of PhysiPy is its extensive collection of physical const
 
 <h1 align="center">Installation</h1>
 
-<h3 align="center">As of now, installations via pip isn't possible/available. You'll have to install it via the given .targz file. Here are the steps:</h3>
+<div align="center">
+
+` pip install PhysiPy-Python `
+
+</div>
+
+<h3 align="center">You can also install it via the given .targz file. Here are the steps:</h3>
 
 <br>
 
