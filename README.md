@@ -4,8 +4,8 @@
 
 <div align="center">
 
+  <a href="https://pypi.org/project/PhysiPy-Python/#history">![License](https://img.shields.io/badge/Install-PyPI-blue)</a>
   <a href="https://opensource.org/licenses/MIT">![License](https://img.shields.io/badge/License-MIT-yellow)</a>
-  <a href="https://opensource.org/">![Language](https://img.shields.io/badge/Open-Source-blue)</a>
   <a href="https://www.fiverr.com/rohancodespy/">![Demo](https://img.shields.io/badge/Fiverr-Hire-green)</a>
 </div>
 
@@ -19,7 +19,9 @@ One of the key features of PhysiPy is its extensive collection of physical const
 
 <div align="center">
 
-` pip install PhysiPy-Python `
+```bash
+pip install PhysiPy-Python
+```
 
 </div>
 
@@ -46,12 +48,12 @@ One of the key features of PhysiPy is its extensive collection of physical const
 
 <br>
 
-```
+```python
 # to calculate resistance
 
-import PhysiPy
+import PhysiPy.Electricity as ec
 
-a = PhysiPy.Electricity.resistance(25, 10)
+a = ec.resistance(25, 10)
 print(a)
 
 >> 2.5
@@ -59,12 +61,12 @@ print(a)
 
 <br>
 
-```
+```python
 # to calculate gravitational potential
 
-import PhysiPy
+import PhysiPy.Gravitation as gr
 
-a = PhysiPy.Gravitation.gravitational_acceleration(25, 1200)
+a = gr.gravitational_acceleration(25, 1200)
 print(a)
 
 >> 1.1586944444444442e^-15
