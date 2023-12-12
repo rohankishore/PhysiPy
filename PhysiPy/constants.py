@@ -1,3 +1,5 @@
+import math
+
 """
 All the Constants related to Physics. Please note that some values might be slightly rounded off
 This will include constants that you may use in high school, or in Engineering, or even in Research
@@ -12,14 +14,14 @@ e = math.e
 epsilon0 = 8.854187817 * (math.pow(10, -12))
 permittivity_of_free_space = 9 * (math.pow(10, 9))
 plancks_constant = 6.62607015 * (math.pow(10, -34))
-elementary_charge = 1.602176634  * (math.pow(10, -19))
+elementary_charge = 1.602176634 * (math.pow(10, -19))
 vonklitzing_constant = 25812.80745
 compton_wavelength = 2.42 * (math.pow(10, -12))
 finestructure_constant = 0.007297351
 bohr_radius = 0.0529
 faraday_constant = 96485
-boltzmann_constant = 1.38064  * (math.pow(10, -23))
-thomson_crosssection = 6.6524  * (math.pow(10, -29))
+boltzmann_constant = 1.38064 * (math.pow(10, -23))
+thomson_crosssection = 6.6524 * (math.pow(10, -29))
 avogadros_number = 6.02214076 * (math.pow(10, 23))
 gas_constant = 8.31446261815324
 electron_mass = 9.10938356 * (math.pow(10, -31))
