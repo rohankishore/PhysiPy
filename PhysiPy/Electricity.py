@@ -2,8 +2,6 @@ from .constants import permittivity_of_free_space
 
 
 class Electricity:
-    def __init__(self):
-        super().__init__()
 
     @staticmethod
     def force_electrostatics(q1, q2, r):

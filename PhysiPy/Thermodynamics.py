@@ -32,8 +32,12 @@ class Thermodynamics:
         return emissivity * stefan_boltzmann_constant * area * (temperature1 ** 4 - temperature2 ** 4)
 
     @staticmethod
-    def first_law_thermodynamics(heat_added, work_done, change_in_internal_energy):
+    def first_law_thermodynamics_bool(heat_added, work_done, change_in_internal_energy):
         return heat_added + work_done == change_in_internal_energy
+
+    @staticmethod
+    def first_law_thermodynamics(heat_added, work_done):
+        return heat_added + work_done
 
     @staticmethod
     def efficiency_carnot(temperature_hot, temperature_cold):
@@ -68,8 +72,12 @@ class Thermodynamics:
         return math.sqrt((3 * boltzmann_constant * temperature) / molar_mass)
 
     @staticmethod
-    def average_kinetic_energy(molar_mass, temperature):
+    def average_kinetic_energy(temperature):
         return (3 / 2) * boltzmann_constant * temperature
+
+    @staticmethod
+    def average_kinetic_energy_with_molar_mass(molar_mass, temperature):
+        return (3 / 2) * boltzmann_constant * molar_mass * temperature
 
     @staticmethod
     def speed_of_sound(molar_mass, temperature, gamma):

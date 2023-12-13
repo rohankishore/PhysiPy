@@ -1,5 +1,6 @@
 from .constants import *
 
+
 class Nlm:
     def __init__(self):
         super().__init__()

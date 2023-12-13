@@ -11,6 +11,7 @@ G = 6.67408 * (math.pow(10, -11))
 speed_of_light = 3 * (math.pow(10, 8))
 pi = math.pi
 e = math.e
+Coulombs_constant = 9e9
 epsilon0 = 8.854187817 * (math.pow(10, -12))
 permittivity_of_free_space = 9 * (math.pow(10, 9))
 plancks_constant = 6.62607015 * (math.pow(10, -34))

@@ -2,24 +2,27 @@ from .constants import *
 
 
 class Gravitation:
-    def __init__(self):
-        super().__init__()
 
+    @staticmethod
     def gr(m1, m2, r):
         rsq = r * r
         result = G * ((m1 * m2) / rsq)
         return result
 
+    @staticmethod
     def G_Potential(M, r):
         v = (-G * M) / r
         return v
 
+    @staticmethod
     def g_in_depth(depth):
         return g * (1 - (depth / 6400))
 
+    @staticmethod
     def axial_velocity(area_swept, time):
         return area_swept / time
 
+    @staticmethod
     def gravitational_force(mass1, mass2, distance):
         return G * mass1 * mass2 / distance ** 2
 
