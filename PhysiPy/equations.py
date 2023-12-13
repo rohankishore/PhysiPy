@@ -5,13 +5,13 @@ def weight(mass):
     return mass * g
 
 
-def density(m, v):
-    return m / v
+def density(mass, vol):
+    return mass / vol
 
 
-def volume(l, w, h):
-    return l * w * h
+def volume(length, width, height):
+    return length * width * height
 
 
-def area(l, w):
-    return l * w
+def area(length, width):
+    return length * width

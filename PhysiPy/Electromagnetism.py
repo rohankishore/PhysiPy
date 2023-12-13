@@ -1,7 +1,7 @@
 from .constants import *
 import math
 import numpy as np
-from .Subatomic import *
+from .Mass import Mass
 
 
 class Electromagnetism:
@@ -115,8 +115,8 @@ class Electromagnetism:
         return plancks_constant / (mass * velocity)
 
     @staticmethod
-    def number_of_ions(charge, elementary_charge):
-        return charge / elementary_charge
+    def number_of_ions(charge, elementary_charge1):
+        return charge / elementary_charge1
 
     @staticmethod
     def acceleration_due_to_gravity(gravitational_field_strength, mass):
@@ -152,7 +152,7 @@ class Electromagnetism:
 
     @staticmethod
     def photoelectric_effect_max_velocity(work_function, stopping_potential):
-        return math.sqrt((2 * elementary_charge * (stopping_potential - work_function)) / SubatomiMass.electron)
+        return math.sqrt((2 * elementary_charge * (stopping_potential - work_function)) / Mass.electron)
 
     @staticmethod
     def decay_law(initial_quantity, decay_constant, time):

@@ -4,18 +4,15 @@ from .constants import *
 class Electrostatics:
     @staticmethod
     def electric_force(charge1, charge2, distance):
-        k = 9e9  # Coulomb's constant
-        return k * charge1 * charge2 / distance ** 2
+        return Coulombs_constant * charge1 * charge2 / distance ** 2
 
     @staticmethod
     def electric_field(charge, distance):
-        k = 9e9  # Coulomb's constant
-        return k * charge / distance ** 2
+        return Coulombs_constant * charge / distance ** 2
 
     @staticmethod
     def electric_potential(charge, distance):
-        k = 9e9  # Coulomb's constant
-        return k * charge / distance
+        return Coulombs_constant * charge / distance
 
     @staticmethod
     def capacitance(charge, voltage):

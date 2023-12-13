@@ -8,23 +8,26 @@ class Subatomic:
 
     @staticmethod
     def mass_energy_equivalence(mass):
-        return mass * (3e8) ** 2
+        return mass * 3e8 ** 2
 
     @staticmethod
     def binding_energy(mass_parent, mass_daughters):
-        return (mass_parent - sum(mass_daughters)) * (9e16)  # Energy in electron volts (eV)
+        # Energy in electron volts (eV)
+        return (mass_parent - sum(mass_daughters)) * 9e16
 
     @staticmethod
     def de_broglie_wavelength(momentum, mass):
-        return (6.63e-34) / (momentum * mass)
+        return 6.63e-34 / (momentum * mass)
 
     @staticmethod
     def bohr_radius(atomic_number):
-        return 0.529 / atomic_number  # Distance in angstroms (Å)
+        # Distance in angstroms (Å)
+        return 0.529 / atomic_number
 
     @staticmethod
     def energy_level_hydrogen(n):
-        return (-13.6) / (n ** 2)  # Energy in electron volts (eV)
+        # Energy in electron volts (eV)
+        return -13.6 / (n ** 2)
 
     @staticmethod
     def radioactive_decay(initial_amount, decay_constant, time):
@@ -33,11 +36,3 @@ class Subatomic:
     @staticmethod
     def half_life(decay_constant):
         return math.log(2) / decay_constant
-
-    class Mass:
-        electron = 9.1 * (math.pow(10, -31))
-        proton = 1.67 * (math.pow(10, -27))
-        neutron = 1.67 * (math.pow(10, -27))
-
-    class Charge:
-        electron = 1.602 * (math.pow(10, -19))

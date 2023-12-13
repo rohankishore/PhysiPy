@@ -1,6 +1,7 @@
 from .constants import *
 import math
-from .Subatomic import *
+from .Mass import Mass
+from .Charge import Charge
 
 
 class SolidStatePhysics:
@@ -41,7 +42,7 @@ class SolidStatePhysics:
     @staticmethod
     def depletion_layer_width(fermi_energy, potential_difference, electron_density):
         return math.sqrt((2 * permittivity_of_free_space * potential_difference) / (
-                SubatomiCharge.electron * electron_density)) / (2 * fermi_energy)
+                Charge.electron * electron_density)) / (2 * fermi_energy)
 
     @staticmethod
     def solar_cell_efficiency(power_output, light_power_input):
@@ -60,8 +61,8 @@ class SolidStatePhysics:
         return -transverse_strain / longitudinal_strain
 
     @staticmethod
-    def thermal_conductivity(heat_flux, temperature_gradient, thickness):
-        return heat_flux * thickness / (temperature_gradient * area)
+    def thermal_conductivity(heat_flux, temperature_gradient, thickness, cross_sectional_area):
+        return heat_flux * thickness / (temperature_gradient * cross_sectional_area)
 
     @staticmethod
     def superconductivity_critical_temperature(critical_field):

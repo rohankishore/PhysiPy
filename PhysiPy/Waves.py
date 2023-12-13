@@ -48,9 +48,12 @@ class Waves:
         return 1 / abs(frequency1 - frequency2)
 
     @staticmethod
-    def doppler_effect(observed_frequency, source_frequency, wave_velocity, observer_velocity, source_velocity):
-        return observed_frequency / source_frequency == (
-                wave_velocity + observer_velocity) / (wave_velocity + source_velocity)
+    def doppler_effect_frequency(frequency, velocity_wave, velocity_observer, velocity_source):
+        return frequency * (velocity_wave + velocity_observer) / (velocity_wave - velocity_source)
+
+    @staticmethod
+    def doppler_effect_wavelength(wavelength, velocity_wave, velocity_observer, velocity_source):
+        return wavelength * (velocity_wave - velocity_source) / (velocity_wave + velocity_observer)
 
     @staticmethod
     def refractive_index(real_depth, apparent_depth):

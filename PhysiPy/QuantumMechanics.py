@@ -1,7 +1,7 @@
-from .constants import permittivity_of_free_space, boltzmann_constant, plancks_constant, speed_of_light, \
-    elementary_charge
+from .constants import *
 import math
-from .Subatomic import *
+from .Mass import Mass
+from .Charge import Charge
 
 
 class QuantumMechanics:
@@ -56,7 +56,7 @@ class QuantumMechanics:
     @staticmethod
     def atomic_orbital_radius(principal_quantum_number):
         return (4 * math.pi * permittivity_of_free_space * (plancks_constant ** 2) * (
-                principal_quantum_number ** 2)) / (Subatomic.Mass.electron * (elementary_charge ** 2))
+                principal_quantum_number ** 2)) / (Mass.electron * (elementary_charge ** 2))
 
     @staticmethod
     def fine_structure_constant():
@@ -78,8 +78,8 @@ class QuantumMechanics:
     @staticmethod
     def plank_distribution(energy, temperature):
         return (2 * energy ** 2) / (
-                (plancks_constant ** 3) * (speed_of_light ** 2) * (
-                math.exp(energy / (boltzmann_constant * temperature)) - 1))
+                (plancks_constant ** 3) * (speed_of_light ** 2) *
+                (math.exp(energy / (boltzmann_constant * temperature)) - 1))
 
     @staticmethod
     def plank_law_intensity(frequency, temperature):
@@ -116,7 +116,7 @@ class QuantumMechanics:
 
     @staticmethod
     def electron_smath_pin_magnetic_moment(magnetic_moment):
-        return magnetic_moment / (Subatomic.Charge.electron * Subatomic.Mass.electron)
+        return magnetic_moment / (Charge.electron * Mass.electron)
 
     @staticmethod
     def electron_g_factor(g_factor, bohr_magneton):

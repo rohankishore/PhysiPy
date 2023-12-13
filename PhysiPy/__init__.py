@@ -1,4 +1,5 @@
 __all__ = [
+    "Charge",
     "constants",
     "derivations",
     "Electricity",
@@ -8,12 +9,13 @@ __all__ = [
     "equations",
     "FluidStatePhysics",
     "Gravitation",
+    "Mass",
     "Mechanics",
     "Nlm",
     "QuantumMechanics",
     "SolidStatePhysics",
     "Subatomic",
-    "Thermodynaics",
+    "Thermodynamics",
     "Waves"
 ]
 

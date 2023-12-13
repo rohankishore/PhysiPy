@@ -3,8 +3,6 @@ import numpy as np
 
 
 class Errors:
-    def __init__(self):
-        super().__init__()
 
     @staticmethod
     def error_muldiv(a, b, c, d):

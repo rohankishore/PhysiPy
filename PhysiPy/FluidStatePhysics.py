@@ -55,5 +55,5 @@ class FluidStatePhysics:
         return (initial_volume * final_moles) / (final_volume * initial_moles)
 
     @staticmethod
-    def ideal_gas_law(pressure, v, temperature, gas_constant):
-        return (pressure * v) / (gas_constant * temperature)
+    def ideal_gas_law(pressure, v, temperature, gas_constant1):
+        return (pressure * v) / (gas_constant1 * temperature)
