@@ -1,63 +1,67 @@
-from .constants import *
+from .constants import g, G, pi
+import math
 
 
 class Gravitation:
 
-    @staticmethod
-    def gr(m1, m2, r):
-        rsq = r * r
-        result = G * ((m1 * m2) / rsq)
-        return result
+    def __init__(self, m1=1, m2=1, r=1, M=1, depth=1, area_swept=1, time=1, mass1=1,
+                 mass2=1, mass=1, distance=1, radius=1,
+                 acceleration_due_to_gravity=1, period=1, semi_major_axis=1):
+        self.m1 = m1
+        self.m2 = m2
+        self.r = r
+        self.M = M
+        self.depth = depth
+        self.area_swept = area_swept
+        self.time = time
+        self.mass1 = mass1
+        self.mass2 = mass2
+        self.mass = mass
+        self.distance = distance
+        self.radius = radius
+        self.acceleration_due_to_gravity = acceleration_due_to_gravity
+        self.period = period
+        self.semi_major_axis = semi_major_axis
 
-    @staticmethod
-    def G_Potential(M, r):
-        v = (-G * M) / r
-        return v
+    def gravity(self):
+        rsq = self.r * self.r
+        return G * ((self.m1 * self.m2) / rsq)
 
-    @staticmethod
-    def g_in_depth(depth):
-        return g * (1 - (depth / 6400))
+    def G_Potential(self):
+        return (-G * self.M) / self.r
 
-    @staticmethod
-    def axial_velocity(area_swept, time):
-        return area_swept / time
+    def g_in_depth(self):
+        return g * (1 - (self.depth / 6400))
 
-    @staticmethod
-    def gravitational_force(mass1, mass2, distance):
-        return G * mass1 * mass2 / distance ** 2
+    def axial_velocity(self):
+        return self.area_swept / self.time
 
-    @staticmethod
-    def gravitational_potential_energy(mass1, mass2, distance):
-        return -(G * mass1 * mass2) / distance
+    def gravitational_force(self):
+        return G * self.mass1 * self.mass2 / self.distance ** 2
 
-    @staticmethod
-    def gravitational_field_strength(mass, distance):
-        return G * mass / distance ** 2
+    def gravitational_potential_energy(self):
+        return -(G * self.mass1 * self.mass2) / self.distance
 
-    @staticmethod
-    def escape_velocity(mass, radius):
-        return math.sqrt(2 * G * mass / radius)
+    def gravitational_field_strength(self):
+        return G * self.mass / self.distance ** 2
 
-    @staticmethod
-    def orbital_velocity(mass, radius):
-        return math.sqrt(G * mass / radius)
+    def escape_velocity(self):
+        return math.sqrt(2 * G * self.mass / self.radius)
 
-    @staticmethod
-    def period_of_orbit(mass, radius):
-        return 2 * math.pi * math.sqrt(radius ** 3 / (G * mass))
+    def orbital_velocity(self):
+        return math.sqrt(G * self.mass / self.radius)
 
-    @staticmethod
-    def gravitational_potential(mass, distance):
-        return -(G * mass) / distance
+    def period_of_orbit(self):
+        return 2 * pi * math.sqrt(self.radius ** 3 / (G * self.mass))
 
-    @staticmethod
-    def weight(mass, acceleration_due_to_gravity):
-        return mass * acceleration_due_to_gravity
+    def gravitational_potential(self):
+        return -(G * self.mass) / self.distance
 
-    @staticmethod
-    def gravitational_acceleration(mass, distance):
-        return G * mass / distance ** 2
+    def weight(self):
+        return self.mass * self.acceleration_due_to_gravity
 
-    @staticmethod
-    def keplers_third_law(period, semi_major_axis):
-        return (period ** 2) / (semi_major_axis ** 3)
+    def gravitational_acceleration(self):
+        return G * self.mass / self.distance ** 2
+
+    def keplers_third_law(self):
+        return (self.period ** 2) / (self.semi_major_axis ** 3)

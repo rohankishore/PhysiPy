@@ -1,73 +1,77 @@
-from .constants import *
+from .constants import pi
 import math
 
 
 class Mechanics:
-    def __init__(self):
-        super().__init__()
 
-    @staticmethod
-    def velocity(initial_velocity, acceleration, time):
-        return initial_velocity + acceleration * time
+    def __init__(self, initial_velocity=1, acceleration=1, time=1, final_velocity=1,
+                 mass=1, velocity=1, force=1, displacement=1, angle=0, work=1,
+                 radius=1, period=1, lever_arm=1, angular_displacement=1,
+                 angular_velocity=1):
+        self.initial_velocity = initial_velocity
+        self.acceleration = acceleration
+        self.time = time
+        self.final_velocity = final_velocity
+        self.mass = mass
+        self.velocity = velocity
+        self.force = force
+        self.displacement = displacement
+        self.angle = angle
+        self.work = work
+        self.radius = radius
+        self.period = period
+        self.lever_arm = lever_arm
+        self.angular_displacement = angular_displacement
+        self.angular_velocity = angular_velocity
 
-    @staticmethod
-    def displacement(initial_velocity, acceleration, time):
-        return initial_velocity * time + 0.5 * acceleration * time ** 2
+    def velocity(self):
+        return self.initial_velocity + self.acceleration * self.time
 
-    @staticmethod
-    def acceleration(final_velocity, initial_velocity, time):
-        return (final_velocity - initial_velocity) / time
+    def displacement(self):
+        return self.initial_velocity * self.time + 0.5 * self.acceleration * \
+               self.time ** 2
 
-    @staticmethod
-    def uniform_accelerated_motion(initial_velocity, time, acceleration):
-        displacement = initial_velocity * time + 0.5 * acceleration * time ** 2
-        final_velocity = initial_velocity + acceleration * time
+    def acceleration(self):
+        return (self.final_velocity - self.initial_velocity) / self.time
+
+    def uniform_accelerated_motion(self):
+        displacement = self.initial_velocity * self.time + 0.5 * self.acceleration * \
+                       self.time ** 2
+        final_velocity = self.initial_velocity + self.acceleration * self.time
         return displacement, final_velocity
 
-    @staticmethod
-    def force(mass, acceleration):
-        return mass * acceleration
+    def force(self):
+        return self.mass * self.acceleration
 
-    @staticmethod
-    def work(force, displacement, angle=0):
-        return force * displacement * math.cos(math.radians(angle))
+    def work(self):
+        return self.force * self.displacement * math.cos(math.radians(self.angle))
 
-    @staticmethod
-    def kinetic_energy(mass, velocity):
-        return 0.5 * mass * velocity ** 2
+    def kinetic_energy(self):
+        return 0.5 * self.mass * self.velocity ** 2
 
-    @staticmethod
-    def potential_energy(mass, height, gravitational_field_strength):
-        return mass * height * gravitational_field_strength
+    def potential_energy(self, height, gravitational_field_strength):
+        return self.mass * height * gravitational_field_strength
 
-    @staticmethod
-    def power(work, time):
-        return work / time
+    def power(self):
+        return self.work / self.time
 
-    @staticmethod
-    def momentum(mass, velocity):
-        return mass * velocity
+    def momentum(self):
+        return self.mass * self.velocity
 
-    @staticmethod
-    def impulse(force, time):
-        return force * time
+    def impulse(self):
+        return self.force * self.time
 
-    @staticmethod
-    def circular_velocity(radius, period):
-        return 2 * math.pi * radius / period
+    def circular_velocity(self):
+        return 2 * pi * self.radius / self.period
 
-    @staticmethod
-    def centripetal_acceleration(radius, velocity):
-        return velocity ** 2 / radius
+    def centripetal_acceleration(self):
+        return self.velocity ** 2 / self.radius
 
-    @staticmethod
-    def torque(force, lever_arm):
-        return force * lever_arm
+    def torque(self):
+        return self.force * self.lever_arm
 
-    @staticmethod
-    def angular_velocity(angular_displacement, time):
-        return angular_displacement / time
+    def angular_velocity(self):
+        return self.angular_displacement / self.time
 
-    @staticmethod
-    def angular_acceleration(angular_velocity, time):
-        return angular_velocity / time
+    def angular_acceleration(self):
+        return self.angular_velocity / self.time

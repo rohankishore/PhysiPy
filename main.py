@@ -1,13 +1,19 @@
-from PhysiPy import *
+from PhysiPy.Electricity import Electricity
+# import math
 
 
 def main():
     print("ran")
-    width = 100
-    height = 20
-    length = 40
-    answer = equations.volume(length, width, height)
-    print(answer)
+
+    # Setting variables
+    voltage = 230
+    resistance = 20
+    # setting up the class
+    e = Electricity(voltage=voltage, resistance=resistance)
+    # retrieving and printing the answer
+    answer = e.current()
+
+    print(f'{answer:,}')
 
 
 if __name__ == '__main__':
