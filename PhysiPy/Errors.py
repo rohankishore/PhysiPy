@@ -1,8 +1,11 @@
-from .constants import *
+# from .constants import *
 import numpy as np
 
 
 class Errors:
+
+    def __init__(self):
+        pass
 
     @staticmethod
     def error_muldiv(a, b, c, d):
