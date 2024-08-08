@@ -15,6 +15,15 @@ With PhysiPy, you can effortlessly perform complex physics computations without 
 
 One of the key features of PhysiPy is its extensive collection of physical constants. It contains hundreds of well-documented and up-to-date constants that are crucial for numerous calculations and experiments. These constants encompass fundamental values such as the speed of light, Planck's constant, elementary charge, Avogadro's number, and many more. By having this wealth of constants readily available, PhysiPy eliminates the need to search for and manually input these values, ensuring accuracy and efficiency in your calculations.
 
+<br>
+
+<div align="center">
+  
+PhysiPy API is currently in development by [Vikram Samak](https://github.com/vikramsamak) and can be found [here](https://github.com/vikramsamak/PhsiPy-Api)
+</div>
+
+<br>
+
 <h1 align="center">Installation</h1>
 
 <div align="center">
