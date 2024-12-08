@@ -24,7 +24,7 @@ PhysiPy API is currently in development by [Vikram Samak](https://github.com/vik
 
 <br>
 
-<h1 align="center">Installation</h1>
+<h1 align="center">⬇️ Installation</h1>
 
 <div align="center">
 
@@ -45,7 +45,7 @@ pip install PhysiPy-Python
 
 <br>
 
-<h1 align="center">Features in a Glance</h1>
+<h1 align="center">⭐ Features in a Glance</h1>
 
 - Over 100 pre-defined Physics Equations (Just substitute the values inside function)
 - Over 150+ constants (including Boltzmann Constant, Gravitational Constants, and much more)
@@ -53,7 +53,7 @@ pip install PhysiPy-Python
 
 <br>
 
-<h1 align="center">Demo Snippets</h1>
+<h1 align="center">🧑🏻‍💻 Demo Snippets</h1>
 
 <br>
 
@@ -80,3 +80,7 @@ print(a)
 
 >> 1.1586944444444442e^-15
 ```
+
+<h1 align="center">❣️ Used by: </h1>
+
+- [Out-of-the-Box-Astronautics-LLC](https://github.com/Out-of-the-Box-Astronautics-LLC/) for their [Lunar Lander project](https://github.com/Out-of-the-Box-Astronautics-LLC/StrongBox)
